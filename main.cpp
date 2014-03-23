@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     QString line;
     for(int j=0;j!=count;++j)
     {
-        QThread::sleep(10);
+        QThread::sleep(300);
         system("acpi -V > ~/power.txt");
         QFile file("/home/rotc/power.txt");
         if(!file.open(QIODevice::ReadOnly|QIODevice::Text))
