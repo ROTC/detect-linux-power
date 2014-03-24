@@ -14,11 +14,11 @@ using std::system;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    const int count = 50;
+    const int count = 3600;
     QString line;
     for(int j=0;j!=count;++j)
     {
-        QThread::sleep(300);
+        QThread::sleep(10);
         system("acpi -V > ~/power.txt");
         QFile file("/home/rotc/power.txt");
         if(!file.open(QIODevice::ReadOnly|QIODevice::Text))
